@@ -9,7 +9,7 @@ class TransactionsController < ApplicationController
     uri = URI.parse('https://gwapi.demo.securenet.com/api/transactions/Search')
 
     bodyContent = {
-      startDate: '02/01/2017',
+      startDate: '10/22/2017',
       endDate: '10/22/2017',
       developerApplication: {
         developerId: 12345678,
@@ -27,9 +27,7 @@ class TransactionsController < ApplicationController
 
     response = http.request(request)
 
-    render :json => {
-      response: response.body
-    }
+    render :json => response.body
   end
 
 end
